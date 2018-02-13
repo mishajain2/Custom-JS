@@ -1,0 +1,4 @@
+please use below javascript to set date to a hidden field:
+
+formyoula.form_fields["b93b-c115-67aa"].set("value", moment().format("YYYY/MM/DD"))
+Please replace "b93b-c115-67aa" with  the component Id of hidden field of your Form.
