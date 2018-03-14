@@ -1,0 +1,26 @@
+//On click of remove button remove the value from the component
+$(document).on("click",".remove_selected_record",function(){
+  //Get component_id from remove button
+  var lookup_component_id = $(this).data("lookup_id").split("component-")[1];
+  //remove value
+  window.formyoula.form_fields[lookup_component_id].set({"value" : ""});
+  var button =  window.formyoula.form_fields[lookup_component_id].get("attributes").button
+  $("#"+$(this).data("lookup_id")+" .lookup_salesforce_record").html('<span class="glyphicon glyphicon-search"></span> '+button)
+})
+
+
+//On selecting any record from salesforce select elements add remove button to it
+$(document).on("click", ".select_salesforce_record",function(){
+  //Get all salesforce select element
+  var total_salesforce_fields = $(".formyoula-SalesforceSelect");
+  //Iterate over all to add remove button with them
+  _.each(total_salesforce_fields , function(record){
+  $(record).find(".col-sm-12").attr("class","col-sm-11")
+  var current_lookup_id = $(record).attr("id");
+  //If remove button already added then skip this
+    if ( $(record).find(".remove_selected_record").length == 0) {
+      //Adding remove button
+      $(record).append('<button class="col-sm-1 btn btn-default remove_selected_record" data-lookup_id = '+current_lookup_id+' type="button" style="width:80px;background-color:#f5f5f5"><span class="glyphicon glyphicon-remove"></span></button> ')
+    }
+  })
+})
