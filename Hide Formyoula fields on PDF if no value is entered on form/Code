@@ -1,0 +1,18 @@
+Please paste the code as written below in the HTML source code of PDF editor:
+
+<div class="first_name" data-field_value="{{8e09-ecc4-137f}}">
+<h3>Name :</h3>
+{{8e09-ecc4-137f}}</div>
+Here "8e09-ecc4-137f" is component-Id of fields whose value you would like to show or hide based on condition.
+
+Please paste the code as written below in the PDF Javascript(Advanced Settings) of PDF editor:
+
+<script type="text/javascript" src="https://d3iyvxaud7i110.cloudfront.net/vendor/jquery/jquery-2.1.3.min.js"></script>
+<script>
+(function(){
+    //Based on value  , hide and show section
+  if (!$(".first_name").attr("data-field_value") ) {
+   $(".first_name").attr("style","display:none;");
+  }
+})();
+</script>
