@@ -1,0 +1,42 @@
+$( document ).ready(function(){
+	repeat_group_elements_display();
+});
+
+$(document).on( "click",".add, .delete",function(event) {
+  repeat_group_elements_display();
+})
+
+function repeat_group_elements_display(){
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Text").each(function(index, value){
+  $(this).removeClass("col-sm-6").addClass("col-sm-6");
+});
+
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Text label.col-sm-2.control-label.input_label").each(function(index, value){
+  $(this).removeClass("col-sm-2").addClass("col-sm-4");
+});
+
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Text div.col-sm-10").each(function(index, value){
+  $(this).removeClass("col-sm-10").addClass("col-sm-8");
+});
+
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Number").each(function(index, value){
+  $(this).removeClass("col-sm-6").addClass("col-sm-6");
+});
+
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Number label.col-sm-2.control-label.input_label").each(function(index, value){
+  $(this).removeClass("col-sm-2").addClass("col-sm-3");
+});
+
+$("#component-61a0-bc15-6bc8  .form-group.formyoula-Number div.col-sm-10").each(function(index, value){
+  $(this).removeClass("col-sm-10").addClass("col-sm-9");
+});
+
+$("#component-61a0-bc15-6bc8  .btn.btn-success.btn-block.add").each(function(index, value){
+  $(this).removeClass("col-sm-12").addClass("col-sm-12");
+});
+
+$("#component-61a0-bc15-6bc8  .btn.btn-danger.btn-block.delete").each(function(index, value){
+  $(this).removeClass("col-sm-12").addClass("col-sm-12");
+});
+
+}
