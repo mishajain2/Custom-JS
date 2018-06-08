@@ -1,0 +1,12 @@
+Code1:
+
+var today = new Date().toISOString().substring(0,10);
+window.formyoula.form_fields['e58f-a7f6-232e'].set( "value",today );
+//Please replace the Formyoula Date component ID 
+
+
+Code2:
+
+var today = new Date().getFullYear()+'-'+("0"+(new Date().getMonth()+1)).slice(-2)+'-'+("0"+new Date().getDate()).slice(-2);
+window.formyoula.form_fields['e58f-a7f6-232e'].set( "value",today );
+//Please replace the Formyoula Date component ID 
