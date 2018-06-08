@@ -1,0 +1,3 @@
+var now = new Date(), minDate = now.toISOString().substring(0,10);
+//Please replace the Formyoula Date component ID 
+$("#component-6db3-40d4-ae5b .date_input").prop('min',minDate)
