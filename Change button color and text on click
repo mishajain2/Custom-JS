@@ -17,3 +17,5 @@ function change_css(){
     $("#component-888c-a465-55d2 button").css(changed_css);
     $("#component-888c-a465-55d2 button").text("changed"); 
 }
+
+/*This code is when we click a button and move to next page. After, we come back. Then, the button color gets changes telling us the button has been visited once.*/
