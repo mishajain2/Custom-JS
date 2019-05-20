@@ -1,0 +1,19 @@
+window.setTimeout(function(){ is_button_clicked(); }, 100);
+
+//Button click event
+$("#component-888c-a465-55d2 button").click(function(){
+    window.formyoula.form_fields["5d07-5ca2-d693"].set("value", "true");
+    change_css();    
+});
+
+function is_button_clicked(){
+    if(window.formyoula.form_fields["5d07-5ca2-d693"].get("value")){
+        change_css();
+    }
+}
+
+function change_css(){
+    var changed_css = {"background-color": "red",    "border-color": "red"};
+    $("#component-888c-a465-55d2 button").css(changed_css);
+    $("#component-888c-a465-55d2 button").text("changed"); 
+}
